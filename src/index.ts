@@ -20,12 +20,7 @@ app
 
     const apiKey = headers['x-api-key'] || null;
 
-    const apiKeyIsValid = apiKeyHandler.verify(apiKey);
-
-    console.log(
-      await apiKeyHandler.decrypt(apiKey!)
-    );
-    
+    const apiKeyIsValid = await apiKeyHandler.verify(apiKey);
 
     if (apiKeyIsValid == false) {
       return set.status = 'Unauthorized';
