@@ -1,0 +1,131 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Red Venture",
+    "collectionId": "69ec2da0-0d88-41d0-967d-eb1f1be915bc",
+    "dateExported": "2024-06-03T16:50:04.815Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9d0380f7-733f-4f79-b917-6f30f83e9172",
+            "colId": "69ec2da0-0d88-41d0-967d-eb1f1be915bc",
+            "containerId": "",
+            "name": "Generate API-KEY",
+            "url": "{{url}}/key/generate",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-06-03T12:11:56.283Z",
+            "modified": "2024-06-03T12:18:14.414Z",
+            "headers": [
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ],
+            "postReq": {
+                "inlineScripts": [
+                    {
+                        "script": [
+                            "const { hash } = tc.response.json;",
+                            "",
+                            "console.log(hash)",
+                            "",
+                            "tc.setVar(\"api-key\", hash);"
+                        ]
+                    }
+                ]
+            }
+        },
+        {
+            "_id": "4dbdae81-4cbf-484a-b221-4e4b6eaed524",
+            "colId": "69ec2da0-0d88-41d0-967d-eb1f1be915bc",
+            "containerId": "",
+            "name": "Get Broths",
+            "url": "{{url}}/broths",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-03T12:19:38.166Z",
+            "modified": "2024-06-03T12:46:43.193Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "{{api-key}}"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ]
+        },
+        {
+            "_id": "de90bcc2-114f-4160-9a29-8f92d6f649dd",
+            "colId": "69ec2da0-0d88-41d0-967d-eb1f1be915bc",
+            "containerId": "",
+            "name": "Order Ramen",
+            "url": "{{url}}/orders",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-06-03T13:34:16.063Z",
+            "modified": "2024-06-03T14:37:41.375Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "{{api-key}}"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ]
+        },
+        {
+            "_id": "99c212d2-8b96-449a-bf78-347470081389",
+            "colId": "69ec2da0-0d88-41d0-967d-eb1f1be915bc",
+            "containerId": "",
+            "name": "Get Proteins",
+            "url": "{{url}}/proteins",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-06-03T12:20:26.582Z",
+            "modified": "2024-06-03T12:20:51.064Z",
+            "headers": [
+                {
+                    "name": "x-api-key",
+                    "value": "{{api-key}}"
+                },
+                {
+                    "name": "Accept",
+                    "value": "*/*",
+                    "isDisabled": true
+                },
+                {
+                    "name": "User-Agent",
+                    "value": "Thunder Client (https://www.thunderclient.com)",
+                    "isDisabled": true
+                }
+            ]
+        }
+    ],
+    "settings": {
+        "envId": "ba59ebaa-d668-4f91-bcb0-1270bf00e79d"
+    },
+    "ref": "sqeJrdcURY1OrNNhT2Ti7ooFIx4-kZGmnf4-tb97q28mkOr08Qkkt_llsvgdab-3s9FtS_028vQ3aEsdziCQbw"
+}
