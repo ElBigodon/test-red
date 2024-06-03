@@ -2,7 +2,7 @@ import { randomBytes, scryptSync, createCipheriv, createDecipheriv } from 'node:
 
 export class ApiKeyHandler {
 
-  public static async decrypt(hash: string) {
+  protected static async decrypt(hash: string) {
 
     if (Bun.env.HASH_KEY == undefined) throw new Error('Invalid HASH_KEY');
 
@@ -33,8 +33,7 @@ export class ApiKeyHandler {
 
     const now = new Date();
 
-    //                          1 hour
-    const ttl = now.getTime() + 3_600_000;
+    const ttl = now.getTime() + 3_600_000; // 1 hour
     
     const createdAt = now.toISOString();
     
@@ -81,10 +80,9 @@ export class ApiKeyHandler {
 
       const { _header } = JSON.parse(unHash);
 
-      if (_header.ttl > Date.now()) return false;
+      if (Date.now() > _header.ttl) return false;
 
-    } 
-    catch (err) { return false; }
+    } catch (err) { return false; }
 
     return true;
   }

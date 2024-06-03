@@ -10,7 +10,7 @@ export const app = new Elysia({ prefix: '/api/v1' })
       info: {
         title: 'Red Ventures Test V1',
         version: '0.1'
-      }
+      },
     }
   })
   )
