@@ -8,46 +8,50 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=M+PLUS+Rounded+1c&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
     <link rel="stylesheet" type="text/scss" media="screen" href="main.scss" />
-    <style>
-
+    <style lang="scss">
       :root {
         --color-black: #000000;
-        --color-background: #FAFAED;
-        --color-primary: #1820EF;
-        --color-secondary: #FF4E42;
-        --color-tertiary: #FFC024;
+        --color-background: #fafaed;
+        --color-blue: #1820ef;
+        --color-red: #ff4e42;
+        --color-yellow: #ffc024;
+        --color-disabled: #c5c5c5;
       }
 
       .container {
         width: 100vw;
         height: 100vh;
         background-color: var(--color-background);
-        color: #fff;
+        color: var(--color-black);
         display: flex;
         flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        
+        font-family: 'M PLUS Rounded 1c', 'sans-serif';
 
-        span {
-          font-family: "Inter", sans-serif;
-          font-size: 2rem;
-          font-weight: 900;
+        .container-header {
+            background-image: url('/images/pattern-red.png');
+            width: 100%;
+            height: 25rem;
         }
+        
       }
     </style>
   </head>
   <body>
     <main class="container">
-      <span>
-        bigode!
-      </span>
+      <header class="container-header">
+        <img src="/images/logo.png" />
+        <img src="/images/people-illustration.png" />
+      </header>
     </main>
   </body>
-  <script type="module">
-  </script>
+  <script type="module"></script>
 </html>
